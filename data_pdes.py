@@ -22,7 +22,7 @@ import numpy as np
 import os
 import h5py
 
-from netCDF4 import Dataset as netCDFDataset
+#from netCDF4 import Dataset as netCDFDataset
 
 
 def get_mgrid(sidelen, vmin=-1, vmax=1, dim=2):

@@ -93,6 +93,15 @@ class CodeBilinear(nn.Module):
         return 'in1_features={}, in2_features={}, out_features={}, bias={}'.format(
             self.in1_features, self.in2_features, self.out_features, self.bias is not None)
 
+class SingleLinear(nn.Module):
+    def __init__(self, code_size):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(code_size, code_size),
+        )
+
+    def forward(self, x):
+        return self.net(x)
 
 class MLP(nn.Module):
     def __init__(self, code_size, hidden_size, out_size=None, nl='swish'):

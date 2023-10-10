@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-from network import MLP, FourierNet
+from network import MLP, FourierNet, SingleLinear
 from torch import nn
 
 
@@ -21,7 +21,7 @@ class Derivative(nn.Module):
     def __init__(self, state_c, code_c, hidden_c, **kwargs):
         super().__init__()
         input_dim = code_c * state_c
-        self.net = MLP(input_dim, hidden_c, nl='swish')
+        self.net = SingleLinear(input_dim)#MLP(input_dim, hidden_c, nl='swish')
 
     def forward(self, t, u):
         return self.net(u)
