@@ -1,10 +1,11 @@
-# Koopman Operator Implicit Neural Representation
+# KoIN: Koopman Operator Implicit Neural Representation
 
-As always, research is built from the shoulders of giants. My sincerest thanks to [Yuan Yin](https://yuan-yin.github.io/), [Matthieu Kirchmeyer](https://mkirchmeyer.github.io/), [Jean-Yves Franceschi](https://jyfranceschi.fr), [Alain Rakotomamonjy](http://asi.insa-rouen.fr/enseignants/~arakoto/), and [Patrick Gallinari](http://www-connex.lip6.fr/~gallinar/gallinari/pmwiki.php) for allowing me to use their amazing work, [DINo](https://github.com/mkirchmeyer/DINo), as a foundation for my research.
+Code outlining and detailing the model featured in my thesis work, Learning Linear Evolution of Partial Differential Equations Through Koopman-Inspired Implicit Neural Representation.  A neural implicit representation framework is employed to reduce spatial complexity into latent representation where the dynamics is governed by a ***linear system***. This framework can be viewed as learning a Koopman operator of the nonlinear systems governed by partial differential equations in a ***mesh-agnostic*** way. Moreover, I leverage auto-encoding to avoid explicit encoding such that full state measurement is avoided. The effectiveness of this framework is validated on several canonical PDE data-sets with a diverse set of initial conditions ranging from 2D wave to incompressible Navier-Stokes equations.
 
-The `requirements.txt` file lists Python package dependencies.
+
 
 ## Data 
+The `requirements.txt` file lists Python package dependencies.
 
 * For `navier_stokes`, `wave`, data is generated as part of the script c.f. `data_pdes.py`.
 
@@ -45,8 +46,7 @@ python3 test.py -d <DATASET> -p <RUN_ID> -g 0 -r <RATE> -s <SEED>
 * `-s`: subsampling seed (defaults to `1` the train subsampling seed; for Table 3.a. we chose `-s 2`)
 
 
-## Citation
-
+As always, research is built from the shoulders of giants. My sincerest thanks to [Yuan Yin](https://yuan-yin.github.io/), [Matthieu Kirchmeyer](https://mkirchmeyer.github.io/), [Jean-Yves Franceschi](https://jyfranceschi.fr), [Alain Rakotomamonjy](http://asi.insa-rouen.fr/enseignants/~arakoto/), and [Patrick Gallinari](http://www-connex.lip6.fr/~gallinar/gallinari/pmwiki.php) for allowing me to use their amazing work, [DINo](https://github.com/mkirchmeyer/DINo), as a foundation for my research.
 ```
 @inproceedings{Yin2023,
 title={Continuous PDE Dynamics Forecasting with Implicit Neural Representations},
