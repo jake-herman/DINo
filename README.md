@@ -45,7 +45,7 @@ python3 test.py -d <DATASET> -p <RUN_ID> -g 0 -r <RATE> -s <SEED>
 * `-r`: subsampling rate (defaults to `1.0`)
 * `-s`: subsampling seed (defaults to `1` the train subsampling seed; for Table 3.a. we chose `-s 2`)
 
-
+## Special Thanks
 As always, research is built from the shoulders of giants. My sincerest thanks to [Yuan Yin](https://yuan-yin.github.io/), [Matthieu Kirchmeyer](https://mkirchmeyer.github.io/), [Jean-Yves Franceschi](https://jyfranceschi.fr), [Alain Rakotomamonjy](http://asi.insa-rouen.fr/enseignants/~arakoto/), and [Patrick Gallinari](http://www-connex.lip6.fr/~gallinar/gallinari/pmwiki.php) for allowing me to use their amazing work, [DINo](https://github.com/mkirchmeyer/DINo), as a foundation for my research.
 ```
 @inproceedings{Yin2023,
